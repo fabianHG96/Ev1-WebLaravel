@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login',[Ev1Controller::class,'index']);
-Route::post('/login',[Ev1Controller::class,'attemp']) ->name ('login.attempt');
+Route::get('/home',[Ev1Controller::class,'index']);
+
 
 Route::get('/', function () {
-    
+
     return view('welcome');
 });

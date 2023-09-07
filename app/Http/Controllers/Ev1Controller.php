@@ -7,13 +7,7 @@ use Illuminate\Http\Request;
 class Ev1Controller extends Controller
 {
     function index(){
-       return View('Ev1.index');
-    }
+        return View('Ev1.index');
+     }
 
-    function attemp (Request $request) {
-        dd($request);
-    }
-        
-    
-    
 }
