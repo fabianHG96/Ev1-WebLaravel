@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\Ev1Controller;
+use App\Http\Controllers\HomeController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home',[Ev1Controller::class,'index'])->name('home');
 Route::get('/menu',[Ev1Controller::class,'list'])->name('menu');
-Route::get('/ej2',[Ev1Controller::class,'ej'])->name('ej2');
+Route::get('/logout',[Ev1Controller::class,'logout'])->name('logout');
 
 Route::group(['prefix'=> 'login'],function(){
 Route::get('/',[Ev1Controller::class,'login'])->name('login');
@@ -29,7 +30,7 @@ Route::group(['prefix'=> 'register'],function(){
     Route::post('/',[Ev1Controller::class,'storageAccount'])->name('register.attempt');
 
 });
-
+Route::get('/home2', [HomeController::class, 'index2'])->name('home2')->middleware('auth');
 
 Route::get('/', function () {
 

@@ -1,14 +1,14 @@
-@extends('layouts.ej2')
+@extends('layouts.home2')
 @section('home')
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-red bg-light navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand text-dark" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand text-dark" href="#page-top"><br>Bienvenido <br>{{ $user->name }}</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item"><a class="nav-link text-dark" href="{{route('menu')}}">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('menu')}}">Cerrar sesion</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('logout')}}">Cerrar sesion</a></li>
                     </ul>
                 </div>
             </div>

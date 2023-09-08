@@ -38,28 +38,37 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user"
                                             id="name"
-                                            placeholder="Ingrese nombre ...">
+                                            placeholder="Ingrese nombre ..." name="name">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user"
-                                            id="apellidos" placeholder="Ingrese apellido ...">
+                                            id="apellidos" placeholder="Ingrese apellido ..." name="apellidos">
                                     </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
                                             id="email" aria-describedby="emailHelp"
-                                            placeholder="Ingrese Email ...">
+                                            placeholder="Ingrese Email ..." name="email">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                            id="password" placeholder="Contraseña ...">
+                                            id="password" placeholder="Contraseña ..." name="password">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                            id="password" placeholder="Repite Contraseña ...">
+                                            id="password" placeholder="Repite Contraseña ..." name="password_confirmation">
                                     </div>
-                                    <a type="submit" class="btn btn-primary btn-user btn-block">
+                                    @if ($errors->any())
+                                                <div class="alert alert-danger">
+                                                    <ul>
+                                                        @foreach ($errors->all() as $error)
+                                                            <li>{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Crear Cuenta
-                                    </a>
+                                    </button>
                                 </form>
                             </div>
                         </div>
