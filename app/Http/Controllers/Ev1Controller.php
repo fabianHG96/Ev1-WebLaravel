@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class Ev1Controller extends Controller
@@ -24,9 +25,29 @@ class Ev1Controller extends Controller
      function register(){
         return View('Ev1.register');
      }
-     function attemptregister(){
-            return view('Ev1.register');
+
+
+    function storageAccount(Request $request){
+        $request->validate([
+            'name'=> 'required | string',
+            'apellidos' => 'required|string',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6|confirmed'
+        ]);
+
+
+        $user = User::create([
+            'name'=> $request->name,
+            'apellidos' => $request->surname,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+        Auth::login($user);
+        return redirect()->route('home');
      }
+
+
+
 
 
 }

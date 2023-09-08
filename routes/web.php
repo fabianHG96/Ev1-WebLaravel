@@ -22,11 +22,13 @@ Route::get('/',[Ev1Controller::class,'login'])->name('login');
 Route::post('/',[Ev1Controller::class,'attemptlogin'])->name('login.attempt');
 
 });
+
 Route::group(['prefix'=> 'register'],function(){
     Route::get('/',[Ev1Controller::class,'register'])->name('register');
-    Route::post('/',[Ev1Controller::class,'attemptregister'])->name('register.attempt');
+    Route::post('/',[Ev1Controller::class,'storageAccount'])->name('register.attempt');
 
 });
+
 
 Route::get('/', function () {
 
