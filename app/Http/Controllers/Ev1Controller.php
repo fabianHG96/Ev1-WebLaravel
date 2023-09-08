@@ -15,6 +15,9 @@ class Ev1Controller extends Controller
      function list(){
         return View('Ev1.list');
      }
+     function list2(){
+        return View('admin.list2');
+     }
 
      function login(){
         return View('Ev1.login');

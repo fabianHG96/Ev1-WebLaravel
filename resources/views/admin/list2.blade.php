@@ -1,4 +1,4 @@
-@extends('layouts.menu')
+@extends('layouts.menu2')
 
 @section('menu_content')
         <!-- Navigation-->
@@ -11,10 +11,7 @@
                         <li class="nav-item"><a class="nav-link text-dark" href="{{route('home')}}">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-dark" href="{{route('menu')}}">Menu</a></li>
                     </ul>
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item "><a class="nav-link text-dark" href="{{route('register')}}">Crear cuenta</a></li>
-                        <li class="nav-item "><a class="nav-link text-dark" href="{{route('login')}}">Iniciar sesion</a></li>
-                    </ul>
+
                 </div>
                     <ul class="navbar-nav nav justify-content-end">
                         <li class="nav-item "><a class="nav-link text-dark" href="{{route('logout')}}">Cerrar sesion</a></li>
