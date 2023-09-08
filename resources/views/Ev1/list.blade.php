@@ -464,5 +464,5 @@
         <!-- Bootstrap core JS-->
         <script width="50%" height="40%" src="https://i.pinimg.com/750x/ab/c8/81/abc88166e368d4b7099c7b84d01ec324.jpg"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="{{ asset ('js/scripts.js') }}"></script>
 @endsection
