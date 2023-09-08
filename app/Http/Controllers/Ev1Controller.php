@@ -14,4 +14,7 @@ class Ev1Controller extends Controller
         return View('Ev1.list');
      }
 
+     function login(){
+        return View('Ev1.login');
+     }
 }
