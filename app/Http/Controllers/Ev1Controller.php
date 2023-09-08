@@ -17,4 +17,6 @@ class Ev1Controller extends Controller
      function login(){
         return View('Ev1.login');
      }
+
+
 }
