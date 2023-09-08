@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class Ev1Controller extends Controller
 {
@@ -15,9 +16,17 @@ class Ev1Controller extends Controller
      function list(){
         return View('Ev1.list');
      }
+
+
      function list2(){
-        return View('admin.list2');
-     }
+        // Verifica si el usuario está autenticado antes de acceder a list2
+        if(Auth::check()){
+            $user = Auth::user();
+            Session::put('name', $user->name);
+            return view('admin.list2', ['name' => $user->name]);
+        }
+    }
+
 
      function login(){
         return View('Ev1.login');
