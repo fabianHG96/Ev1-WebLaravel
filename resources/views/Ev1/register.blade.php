@@ -2,20 +2,18 @@
 @section('register')
 
 
-<form action="{{ route('register.attempt') }}" method="POST">
+<form action="{{ route('register.attempt') }}" method="POST" >
 @csrf
-<div class="container">
+<div class="container" style="background:url(https://www.xtrafondos.com/descargar.php?id=7943&resolucion=2560x1440)">
 
     <!-- Outer Row -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center ">
+        <div class="col-xl-10 col-lg-12 col-md-9 " >
 
-        <div class="col-xl-10 col-lg-12 col-md-9">
-
-            <div class="card o-hidden border-0 shadow-lg my-5" ">
-                <div class="card-body p-0">
+            <div class="card o-hidden border-0 shadow-lg my-5 ">
+                <div class="card-body p-0 border border-primary"  style="background: url(https://img.freepik.com/vector-premium/cafeteria-grabada-fondo-objetos-relacionados-textura-papel-kraft_281653-1168.jpg)">
                     <!-- Nested Row within Card Body -->
-                    <div class="row" >
-
+                    <div class="row " >
                         <div class="col-lg-6" style="margin-left: 225px" >
                             <div class="p-5">
                                 <div class="text-center">

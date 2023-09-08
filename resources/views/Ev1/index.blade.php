@@ -7,9 +7,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item"><a class="nav-link text-dark" href="http://localhost/ev1/public/menu">Menu</a></li>
-                        <li class="nav-item "><a class="nav-link text-dark" href="#!">Crear cuenta</a></li>
-                        <li class="nav-item "><a class="nav-link text-dark" href="#!">Iniciar sesion</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('menu')}}">Menu</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="{{route('register')}}">Crear cuenta</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="{{route('login')}}">Iniciar sesion</a></li>
                     </ul>
                 </div>
             </div>
