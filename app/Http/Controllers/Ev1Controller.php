@@ -45,6 +45,9 @@ class Ev1Controller extends Controller
         Auth::login($user);
         return redirect()->route('home');
      }
+     function ej(){
+        return View('admin.ej');
+     }
 
 
 
