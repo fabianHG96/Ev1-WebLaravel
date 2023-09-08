@@ -1,34 +1,35 @@
 @extends('layouts.home')
 @section('home')
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-red bg-light navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand text-dark" href="#page-top">Start Bootstrap</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#!">Sign Up</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Log In</a></li>
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item "><a class="nav-link text-dark" href="#!">Sign Up</a></li>
+                        <li class="nav-item "><a class="nav-link text-dark" href="#!">Log In</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Header-->
-        <header class="masthead text-center text-white">
-            <div class="masthead-content">
+        <header class="masthead text-center text-light bg-dark" style="padding-top: 130px">
+            <div class="masthead-content" display="flex" >
                 <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">One Page Wonder</h1>
+                    <h1 class="masthead-heading mb-0 text-primary">One Page Wonder</h1>
                     <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
                     <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+
                 </div>
             </div>
-            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-1 bg-circle" style="padding-top: 280px"></div>
             <div class="bg-circle-2 bg-circle"></div>
             <div class="bg-circle-3 bg-circle"></div>
             <div class="bg-circle-4 bg-circle"></div>
         </header>
         <!-- Content section 1-->
-        <section id="scroll">
+        <section id="scroll" style="bg-success" >
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-2">
