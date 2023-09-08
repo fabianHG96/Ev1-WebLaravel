@@ -8,10 +8,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a></li>
                 <li class="nav-item "><a class="nav-link text-dark" href="{{route('register')}}">Crear cuenta</a></li>
-                <li class="nav-item "><a class="nav-link text-dark" href="{{route('login')}}">Iniciar sesion</a></li>
-            </ul>
-            <ul class="navbar-nav nav justify-content-end">
-                <li class="nav-item "><a class="nav-link text-dark" href="{{route('login')}}">Cerrar sesion</a></li>
+                <li class="nav-item "><a class="nav-link text-dark" href="{{route('home2')}}">Iniciar sesion</a></li>
             </ul>
         </div>
     </div>
@@ -40,21 +37,15 @@
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
                                             id="exampleInputEmail" aria-describedby="emailHelp"
-                                            placeholder="Enter Email Address...">
+                                            placeholder="Enter Email Address..." name="email">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="exampleInputPassword" placeholder="Password" name="password">
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">Recuerdame</label>
-                                        </div>
-                                    </div>
-                                    <a href="{{route ('home') }}" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Iniciar sesion
-                                    </a>
+                                    </button>
                                 </form>
                                 <div class="text-center">
                                     <a class="small" href="{{route('register')}}">¡Crea una cuenta!</a>

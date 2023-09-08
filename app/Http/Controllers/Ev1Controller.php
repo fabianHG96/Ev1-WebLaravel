@@ -19,8 +19,20 @@ class Ev1Controller extends Controller
      function login(){
         return View('Ev1.login');
      }
-     function attemptlogin(){
-            return view('Ev1.login');
+     function attemptlogin(Request $request){
+        $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string'
+        ]);
+        $credentials = ['email' => $request->email, 'password' => $request->password];
+        if(Auth::attempt($credentials, $request?->remember)){
+            $user = Auth::user();
+            return redirect()->route('home2')->with('user', $user);
+        }else{
+            return redirect()->back()->withErrors(['error' => 'Credenciales incorrectas']);
+        }
+
+
      }
      function register(){
         return View('Ev1.register');
@@ -38,18 +50,18 @@ class Ev1Controller extends Controller
 
         $user = User::create([
             'name'=> $request->name,
-            'apellidos' => $request->surname,
+            'apellidos' => $request->apellidos,
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
         Auth::login($user);
+        return redirect()->route('home2');
+     }
+
+     public function logout(){
+        Auth::logout();
         return redirect()->route('home');
-     }
-     function ej(){
-        return View('admin.ej');
-     }
-
-
+    }
 
 
 
