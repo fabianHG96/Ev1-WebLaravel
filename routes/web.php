@@ -32,7 +32,6 @@ Route::group(['prefix'=> 'register'],function(){
 
 });
 Route::get('/home2', [HomeController::class, 'index2'])->name('home2')->middleware('auth');
-
 Route::get('/', function () {
 
     return view('welcome');
