@@ -38,7 +38,11 @@
                                         <input type="password" class="form-control form-control-user"
                                             id="password" placeholder="Contraseña ...">
                                     </div>
-                                    <a href="{{route ('login') }}" class="btn btn-primary btn-user btn-block">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="password" placeholder="Repite Contraseña ...">
+                                    </div>
+                                    <a type="submit" class="btn btn-primary btn-user btn-block">
                                         Crear Cuenta
                                     </a>
                                 </form>
