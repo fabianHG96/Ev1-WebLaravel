@@ -1,7 +1,8 @@
-@extends('layouts.inicio')
-@section('login')
+@extends('layouts.registrar')
+@section('register')
 
-<form action="{{ route('login.attempt') }}" method="POST">
+
+<form action="{{ route('register.attempt') }}" method="POST">
 @csrf
 <div class="container">
 
@@ -18,32 +19,31 @@
                         <div class="col-lg-6" style="margin-left: 225px" >
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">CREAR CUENTA</h1>
                                 </div>
                                 <form class="user">
                                     <div class="form-group">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="name"
+                                            placeholder="Ingrese nombre ...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="apellidos" placeholder="Ingrese apellido ...">
+                                    </div>
+                                    <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
-                                            id="exampleInputEmail" aria-describedby="emailHelp"
-                                            placeholder="Enter Email Address...">
+                                            id="email" aria-describedby="emailHelp"
+                                            placeholder="Ingrese Email ...">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="password" placeholder="Contraseña ...">
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">Remember
-                                                Me</label>
-                                        </div>
-                                    </div>
-                                    <a href="{{route ('home') }}" class="btn btn-primary btn-user btn-block">
-                                        Iniciar sesion
+                                    <a href="{{route ('login') }}" class="btn btn-primary btn-user btn-block">
+                                        Crear Cuenta
                                     </a>
                                 </form>
-                                <div class="text-center">
-                                    <a class="small" href="/register.html">Create an Account!</a>
-                                </div>
                             </div>
                         </div>
                     </div>
