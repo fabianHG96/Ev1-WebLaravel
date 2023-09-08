@@ -10,4 +10,8 @@ class Ev1Controller extends Controller
         return View('Ev1.index');
      }
 
+     function list(){
+        return View('Ev1.list');
+     }
+
 }

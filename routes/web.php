@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home',[Ev1Controller::class,'index']);
-
+Route::get('/menu',[Ev1Controller::class,'list']);
 
 Route::get('/', function () {
 
