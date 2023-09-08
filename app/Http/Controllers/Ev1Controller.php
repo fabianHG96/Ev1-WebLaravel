@@ -27,6 +27,9 @@ class Ev1Controller extends Controller
      function attemptregister(){
             return view('Ev1.register');
      }
+     function ej(){
+        return View('admin.ej');
+     }
 
 
 }

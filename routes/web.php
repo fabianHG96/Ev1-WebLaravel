@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home',[Ev1Controller::class,'index'])->name('home');
 Route::get('/menu',[Ev1Controller::class,'list'])->name('menu');
+Route::get('/ej2',[Ev1Controller::class,'ej'])->name('ej2');
 
 Route::group(['prefix'=> 'login'],function(){
 Route::get('/',[Ev1Controller::class,'login'])->name('login');
