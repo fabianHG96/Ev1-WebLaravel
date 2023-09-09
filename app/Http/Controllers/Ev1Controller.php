@@ -75,13 +75,4 @@ class Ev1Controller extends Controller {
         Auth::logout();
         return redirect()->route('home');
     }
-
-    public function obtenerDato() {
-      $dato = DB::table('categorias')
-                ->where('id', 2)
-                ->value('categoria'); // Suponiendo que el nombre del campo es "nombre"
-  
-      return view('menu_content', ['dato' => $dato]);
-   }
-
 }
