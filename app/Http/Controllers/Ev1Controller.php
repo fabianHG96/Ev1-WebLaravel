@@ -27,7 +27,8 @@ class Ev1Controller extends Controller {
         if(Auth::check()){
             $user = Auth::user();
             Session::put('name', $user->name);
-            return view('admin.list2', ['name' => $user->name]);
+            $categorias = Categoria::with('productos')->get();
+            return view('admin.list2', ['name' => $user->name],['categorias' => $categorias] );
         }
     }
 
