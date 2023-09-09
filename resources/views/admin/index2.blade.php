@@ -1,14 +1,19 @@
 @extends('layouts.home2')
 @section('home')
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-red bg-light navbar-custom fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand text-dark" href="#page-top"><br>Bienvenido <br>{{ $user->name }}</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Bienvenido {{ $user->name }}</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('menu')}}">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('logout')}}">Cerrar sesion</a></li>
+                    <ul class="navbar-nav ms-left" >
+                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('home2')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="{{route('menu2')}}">Menu</a></li>
+                    </ul>
+
+                </div>
+                    <ul class="navbar-nav nav justify-content-end">
+                        <li class="nav-item "><a class="nav-link text-dark" href="{{route('logout')}}">Cerrar sesion</a></li>
                     </ul>
                 </div>
             </div>

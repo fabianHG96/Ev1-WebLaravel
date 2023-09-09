@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Categoria;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class Ev1Controller extends Controller {
     function index(){
@@ -16,10 +17,19 @@ class Ev1Controller extends Controller {
       $categorias = Categoria::with('productos')->get();
          return View('Ev1.list', ['categorias' => $categorias]);
      }
-
+     
      function categorias(){
       return $this->belongsTo(Categoria::class);
      }
+
+     function list2(){
+        // Verifica si el usuario está autenticado antes de acceder a list2
+        if(Auth::check()){
+            $user = Auth::user();
+            Session::put('name', $user->name);
+            return view('admin.list2', ['name' => $user->name]);
+        }
+    }
 
 
      function login(){

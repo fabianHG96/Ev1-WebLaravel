@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home',[Ev1Controller::class,'index'])->name('home');
 Route::get('/menu',[Ev1Controller::class,'list'])->name('menu');
+Route::get('/menu2',[Ev1Controller::class,'list2'])->name('menu2');
 Route::get('/logout',[Ev1Controller::class,'logout'])->name('logout');
 
 Route::group(['prefix'=> 'login'],function(){
@@ -33,7 +34,6 @@ Route::group(['prefix'=> 'register'],function(){
 
 });
 Route::get('/home2', [HomeController::class, 'index2'])->name('home2')->middleware('auth');
-
 Route::get('/', function () {
 
     return view('welcome');
